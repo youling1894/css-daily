@@ -1,0 +1,43 @@
+<div>
+</div>
+<style>
+    div{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        background: linear-gradient(45deg,#52ffaf,#2196f3);
+        box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, .2);
+    }
+    div::after,
+    div::before{
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 8px;
+        background-color: #fff;
+        border-radius: 3px;
+        transition: all ease .2s;
+        
+    }
+    div::after{
+        filter:drop-shadow(0 13px 0 white);
+        transform: translateY(-13px);
+    }
+    div::before{
+        transform: translateY(13px);
+    }
+    div:hover::after{
+        filter:none;
+        transform: translateY(0px) rotateZ(45deg);
+    }
+    div:hover::before{
+        transform: translateY(0px) rotateZ(-45deg);
+    }
+
+</style>
