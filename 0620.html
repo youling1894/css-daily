@@ -1,0 +1,36 @@
+<div>31</div>
+<style>
+  div {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  div::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(45, 118, 228, 0.7);
+    width: inherit;
+    height: inherit;
+    transform: scaleY(0.7);
+    z-index: -1;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  div::before {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: 75%;
+    bottom: 50%;
+    transform-origin: bottom;
+    background-color: #cccccc;
+    z-index: -1;
+    transform: perspective(280px) rotateX(35deg) scaleY(0.8);
+    border-radius: 5px 5px 0 0;
+  }
+</style>
