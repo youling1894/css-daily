@@ -1,0 +1,21 @@
+<div></div>
+<style>
+  div {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  div::after,
+  div::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: inherit;
+    height: inherit;
+    transform: rotateZ(45deg) skew(20deg, 20deg) translate(-26px, -26px);
+    border: 18px solid #41b883;
+    box-shadow: 0 0 0 18px #39495e inset;
+  }
+</style>
