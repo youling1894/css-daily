@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="text">
+    hello
+  </div>
+  <div class="inner">
+    world
+  </div>
+  <div class="text">
+    hello
+  </div>
+</div>
+<style>
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    position: relative;
+    width: 173px;
+    height: 122px;
+  }
+  .text {
+    font-size: 80px;
+    position: absolute;
+    top: 0;
+  }
+  .text:first-child {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    color: yellowgreen;
+    transition: all 0.5s linear;
+  }
+  .text:last-child {
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    color: blueviolet;
+    transition: all 0.5s linear;
+  }
+  .inner {
+    top: 28%;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    font-size: 30px;
+    color: tomato;
+    transform: scale(1, 0);
+    transition: all 0.5s ease;
+  }
+  .container:hover .text:first-child {
+    top: -30px;
+  }
+  .container:hover .text:last-child {
+    top: 30px;
+  }
+  .container:hover .inner {
+    transform: scale(1, 1);
+  }
+</style>
